@@ -31,6 +31,26 @@ $ fsls --help
     -p, --plain          No unicode characters
 ```
 
+Sample Output
+-------------
+
+```
+$ fsls "**/*.js" -d 2
+
+ ├── fsls.js
+ ├── index.js
+ ├─┬ node_modules/
+ │ ├── archy/
+ │ ├── colors/
+ │ ├── commander/
+ │ ├── glob/
+ │ └── mocha/
+ └─┬ test/
+   ├── basic.js
+   ├── common.js
+   └── fixtures/
+```
+
 - - -
 
 ### Developed by [Terra Eclipse](http://www.terraeclipse.com)
