@@ -7,12 +7,12 @@ describe('tree', function () {
       assert.deepEqual(nodes, {
         "nodes": [
           {
-            "label": "more",
+            "label": "more/",
             "nodes": [
               "bar.txt",
               "foo.js",
               {
-                "label": "deeper",
+                "label": "deeper/",
                 "nodes": [
                   "baz.js"
                 ]
@@ -32,10 +32,28 @@ describe('tree', function () {
       assert.deepEqual(nodes, {
         "nodes": [
           {
-            "label": "more",
-            "nodes": []
+            "label": "more/"
           },
           "test.js"
+        ]
+      });
+      done();
+    });
+  });
+
+   it('respects structure option', function (done) {
+    fsls({cwd: cwd, structure: true}, function (err, nodes) {
+      assert.ifError(err);
+      assert.deepEqual(nodes, {
+        "nodes": [
+          {
+            "label": "more/",
+            "nodes": [
+              {
+                "label": "deeper/",
+              }
+            ]
+          }
         ]
       });
       done();
