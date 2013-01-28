@@ -7,6 +7,32 @@ Print directory trees with glob filtering.
 
 &#x60;... project README above this point ...&#x60;
 
+Install
+-------
+
+```
+$ npm install -g fsls
+```
+
+
+Usage
+-----
+
+```
+$ fsls --help
+
+  Usage: fsls [options] ["glob pattern"]
+
+  Options:
+
+    -h, --help           output usage information
+    -V, --version        output the version number
+    -c, --cwd <cwd>      Use this instead of actual cwd
+    -d, --depth <depth>  Max depth of tree to print
+    -s, --structure      Only show directory structure, no files
+    -p, --plain          No unicode characters
+```
+
 - - -
 
 ### Developed by [Terra Eclipse](http://www.terraeclipse.com)
