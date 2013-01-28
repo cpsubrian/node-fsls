@@ -3,9 +3,7 @@ fsls
 
 Print directory trees with glob filtering.
 
-[![build status](https://secure.travis-ci.org/cpsubrian/fsls.png)](http://travis-ci.org/cpsubrian/fsls)
-
-&#x60;... project README above this point ...&#x60;
+[![build status](https://secure.travis-ci.org/cpsubrian/node-fsls.png)](http://travis-ci.org/cpsubrian/node-fsls)
 
 Install
 -------
