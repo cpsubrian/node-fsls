@@ -1,0 +1,30 @@
+{
+  "name": "fsls",
+  "version": "0.0.0",
+  "description": "Print directory trees with glob filtering.",
+  "main": "index.js",
+  "dependencies": {
+    "commander": "~1.1.1",
+    "glob": "~3.1.17",
+    "archy": "~0.0.2"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cpsubrian/fsls.git"
+  },
+  "homepage": "https://github.com/cpsubrian/fsls",
+  "keywords": [
+    "directory",
+    "tree",
+    "print",
+    "cli"
+  ],
+  "author": "Brian Link <cpsubrian@gmail.com>",
+  "license": "MIT"
+}
