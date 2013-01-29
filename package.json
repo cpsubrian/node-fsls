@@ -18,9 +18,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/cpsubrian/fsls.git"
+    "url": "git://github.com/cpsubrian/node-fsls.git"
   },
-  "homepage": "https://github.com/cpsubrian/fsls",
+  "homepage": "https://github.com/cpsubrian/node-fsls",
   "keywords": [
     "directory",
     "tree",
@@ -28,5 +28,8 @@
     "cli"
   ],
   "author": "Brian Link <cpsubrian@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8.0"
+  }
 }
