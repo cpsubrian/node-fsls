@@ -1,6 +1,6 @@
 {
   "name": "fsls",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Print directory trees with glob filtering.",
   "main": "fsls.js",
   "bin": "./bin/fsls",
