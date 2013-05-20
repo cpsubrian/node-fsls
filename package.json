@@ -2,8 +2,8 @@
   "name": "fsls",
   "version": "0.0.5",
   "description": "Print directory trees with glob filtering.",
-  "main": "fsjs.js",
-  "bin": "./bin/fsjs",
+  "main": "fsls.js",
+  "bin": "./bin/fsls",
   "dependencies": {
     "commander": "~1.1.1",
     "glob": "~3.1.17",
