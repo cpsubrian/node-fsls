@@ -11,9 +11,11 @@ program
   .option('-d, --depth <depth>', 'Max depth of tree to print')
   .option('-s, --structure', 'Only show directory structure, no files')
   .option('-p, --plain', 'No unicode characters')
+  .option('--no-color', 'Do not colorize output')
   .parse(process.argv);
 
 var options = {
+  color: true,
   unicode: true
 };
 if (program.cwd) {
@@ -31,10 +33,13 @@ if (program.args.length === 1) {
 if (program.plain) {
   options.unicode = false;
 }
+if (program.color !== options.color) {
+  options.color = program.color;
+}
 
 fsls(options, function (err, nodes) {
   if (err) return console.error(err);
-  colorize(nodes);
+  if (options.color) colorize(nodes);
   console.log(archy(nodes, ' ', options));
 });
 
