@@ -28,7 +28,7 @@ function glob_to_nodes(files, options) {
   var tree = {};
 
   files.forEach(function (file) {
-    var parts = file.split(path.sep)
+    var parts = file.split('/')
       , file = parts.pop();
 
     var trunk = parts.reduce(function (trunk, part) {
