@@ -1,5 +1,6 @@
 describe('tree', function () {
   var cwd = path.join(__dirname, 'fixtures');
+  var sep = path.sep;
 
   it('generates the nodes tree', function (done) {
     fsls({cwd: cwd}, function (err, nodes) {
@@ -7,12 +8,12 @@ describe('tree', function () {
       assert.deepEqual(nodes, {
         "nodes": [
           {
-            "label": "more/",
+            "label": "more"+ sep,
             "nodes": [
               "bar.txt",
               "foo.js",
               {
-                "label": "deeper/",
+                "label": "deeper"+ sep,
                 "nodes": [
                   "baz.js"
                 ]
@@ -32,7 +33,7 @@ describe('tree', function () {
       assert.deepEqual(nodes, {
         "nodes": [
           {
-            "label": "more/"
+            "label": "more"+ sep
           },
           "test.js"
         ]
@@ -47,10 +48,10 @@ describe('tree', function () {
       assert.deepEqual(nodes, {
         "nodes": [
           {
-            "label": "more/",
+            "label": "more"+ sep,
             "nodes": [
               {
-                "label": "deeper/",
+                "label": "deeper"+ sep,
               }
             ]
           }
