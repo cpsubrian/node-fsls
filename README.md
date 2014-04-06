@@ -29,6 +29,7 @@ $ fsls --help
     -d, --depth <depth>  Max depth of tree to print
     -s, --structure      Only show directory structure, no files
     -p, --plain          No unicode characters
+    -f, --flat           Do not print a tree, print a flat structure
     --no-color           Do not colorize output
 ```
 
