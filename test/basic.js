@@ -61,4 +61,24 @@ describe('tree', function () {
     });
   });
 
+   it('should be able to expand tilde in cwd', function (done) {
+     var options = {cwd: '~', pattern: '*.foo'};
+
+     fsls(options, function (err, nodes) {
+       assert.notEqual(options.cwd[0], '~');
+
+       done();
+     });
+   });
+
+   it('should be able to expand tilde in pattern', function (done) {
+     var options = {cwd: '~', pattern: '~/*.foo'};
+
+     fsls(options, function (err, nodes) {
+       assert.notEqual(options.cwd[0], '~');
+
+       done();
+     });
+   });
+
 });
