@@ -81,4 +81,21 @@ describe('tree', function () {
      });
    });
 
+   it('should be able to return a flat representation', function (done) {
+      fsls({cwd: cwd, flat: true}, function (err, nodes) {
+        assert.ifError(err);
+
+        assert.deepEqual(nodes, [
+          'more/',
+          'more/bar.txt',
+          'more/deeper/',
+          'more/deeper/baz.js',
+          'more/foo.js',
+          'test.js'
+        ]);
+        
+        done();
+      });
+   });
+
 });

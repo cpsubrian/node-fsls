@@ -21,8 +21,17 @@ module.exports = function (options, cb) {
   }
 
   glob(options.pattern, globOpts, function (err, files) {
+    var result;
+
     if (err) return cb(null);
-    cb(null, glob_to_nodes(files, options));
+
+    result = files;
+
+    if (!options.flat) {
+      result = glob_to_nodes(files, options);
+    }
+
+    cb(null, result);
   });
 };
 
