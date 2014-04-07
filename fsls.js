@@ -9,11 +9,14 @@ module.exports = function (options, cb) {
     options.pattern = '**/*';
   }
 
+  options.pattern = expand_tilde(options.pattern);
+
   var globOpts = {
     stat: true,
     mark: true
   };
   if (options.cwd) {
+    options.cwd = expand_tilde(options.cwd);
     globOpts.cwd = options.cwd;
   }
 
@@ -22,6 +25,19 @@ module.exports = function (options, cb) {
     cb(null, glob_to_nodes(files, options));
   });
 };
+
+function expand_tilde (p) {
+  var home = process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
+  var tilde = '~';
+
+  p = p || '';
+
+  if (p[0] === tilde) {
+    p = p.replace(tilde, home);
+  }
+
+  return p;
+}
 
 // Convert glob() results to archy nodes structure.
 function glob_to_nodes(files, options) {
